@@ -6,7 +6,11 @@
 
         <classes>
             <class name="deneme">
+<!--                <methods>-->
+<!--                    <include name="Demo"></include>-->
+<!--                </methods>-->
             </class>
+            <class name="deneme1"></class>
         </classes>
 
     </test>
