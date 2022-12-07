@@ -1,23 +1,48 @@
 package Tests;
 
+import Common.Util;
+import Pages.MainPage;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 public class firstCase {
 
-    @Test
-    public void Demo(){
-        System.out.println("hello");
-    }
+    String driverPath = "chromedriver.exe";
+    WebDriver driver;
+    MainPage mainPage;
 
-    @Test
-    public void Demo1(){
-        System.out.println("hello1");
+    public void getObject(){
+        mainPage = new MainPage(driver);
     }
 
     @BeforeTest
-    public void prerequest(){
-        System.out.println("executed first");
+    public void setup() {
+        System.setProperty("webdriver.chrome.driver", driverPath);
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get("https://techcrunch.com/");
+        driver.manage().window().maximize();
+        System.out.println("mainpage executed");
     }
 
+    @AfterTest
+    public void shutdown(){
+        driver.quit();
+    }
+
+    @Test
+    public void mainSenario(){
+        getObject();
+        String loginPageTitle = mainPage.getMainPageTitle();
+        System.out.println(loginPageTitle);
+    }
+
+
+
 }
+
