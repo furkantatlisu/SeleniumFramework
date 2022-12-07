@@ -5,12 +5,11 @@
     <test verbose="2" preserve-order="true" name="C:/Users/lenovo/github/BasicToAdvanceFramework">
 
         <classes>
-            <class name="deneme">
+            <class name="Tests.firstCase">
 <!--                <methods>-->
 <!--                    <include name="Demo"></include>-->
 <!--                </methods>-->
             </class>
-            <class name="deneme1"></class>
         </classes>
 
     </test>
