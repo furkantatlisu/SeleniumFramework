@@ -38,8 +38,8 @@ public class firstCase {
     @Test
     public void mainSenario(){
         getObject();
-        String loginPageTitle = mainPage.getMainPageTitle();
-        System.out.println(loginPageTitle);
+        mainPage.checkMainPageTitle();  //verify main page
+        mainPage.confirmLatestNewsAuthorList();
     }
 
 

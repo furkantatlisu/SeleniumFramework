@@ -9,7 +9,6 @@ import java.util.List;
 public class Util {
 
     WebDriver driver;
-    Log log;
 
     public Util(WebDriver driver) {
         this.driver = driver;
@@ -27,11 +26,11 @@ public class Util {
         return driver.findElements(locator);
     }
 
-    public void click(By locator){
+    public void click(By locator,String logText){
         find(locator).click();
     }
 
-    public void type(By locator , String text){
+    public void type(By locator , String text,String logText){
         find(locator).sendKeys(text);
     }
 
