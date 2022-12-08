@@ -5,7 +5,7 @@
     <test verbose="2" preserve-order="true" name="C:/Users/lenovo/github/BasicToAdvanceFramework">
 
         <classes>
-            <class name="Tests.firstCase">
+            <class name="Tests.FirstCase">
 <!--                <methods>-->
 <!--                    <include name="Demo"></include>-->
 <!--                </methods>-->

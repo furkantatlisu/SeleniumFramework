@@ -1,6 +1,6 @@
 package Tests;
 
-import Common.Util;
+import Pages.LatestNewsPage;
 import Pages.MainPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,14 +10,16 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class firstCase {
+public class FirstCase {
 
     String driverPath = "chromedriver.exe";
     WebDriver driver;
     MainPage mainPage;
+    LatestNewsPage latestNewsPage;
 
     public void getObject(){
         mainPage = new MainPage(driver);
+        latestNewsPage = new LatestNewsPage(driver);
     }
 
     @BeforeTest
@@ -42,6 +44,7 @@ public class firstCase {
         mainPage.confirmLatestNewsAuthorList();
         mainPage.confirmLatestNewsImageList();
         mainPage.compareRandomChosenTitle();
+        latestNewsPage.compareUrlAndTitle();
     }
 
 

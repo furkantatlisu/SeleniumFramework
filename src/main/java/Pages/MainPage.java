@@ -4,12 +4,10 @@ import Common.Util;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class MainPage {
     WebDriver driver;
@@ -66,8 +64,6 @@ public class MainPage {
             System.out.println("wrong titles");
             return false;
         }
-
-
     }
 
 }
