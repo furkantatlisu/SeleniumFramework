@@ -29,12 +29,13 @@ public class FirstCase {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://techcrunch.com/");
         driver.manage().window().maximize();
-        System.out.println("mainpage executed");
+        System.out.println("driver executed");
     }
 
     @AfterTest
     public void shutdown(){
         driver.quit();
+        System.out.println("driver closed");
     }
 
     @Test
