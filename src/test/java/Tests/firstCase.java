@@ -40,9 +40,10 @@ public class firstCase {
         getObject();
         mainPage.checkMainPageTitle();  //verify main page
         mainPage.confirmLatestNewsAuthorList();
+        mainPage.confirmLatestNewsImageList();
+        mainPage.compareRandomChosenTitle();
     }
 
 
 
 }
-
