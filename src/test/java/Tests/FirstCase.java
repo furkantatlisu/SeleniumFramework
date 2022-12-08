@@ -46,6 +46,7 @@ public class FirstCase {
         mainPage.confirmLatestNewsImageList();
         mainPage.compareRandomChosenTitle();
         latestNewsPage.compareUrlAndTitle();
+        latestNewsPage.compareBrowserTabAndTitle();
     }
 
 

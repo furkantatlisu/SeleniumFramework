@@ -34,5 +34,19 @@ public class LatestNewsPage {
         }
     }
 
+    public boolean compareBrowserTabAndTitle(){
+        String tabName = driver.getTitle().toUpperCase().substring(0,10);
+        String substringText = util.find(latestNewsMainTitle).getText().toUpperCase().substring(0,10);
+
+        if (substringText.equals(tabName)){
+            System.out.println("title and browser name are matched");
+            return true;
+        }
+        else {
+            System.out.println("title and browser name are not matched");
+            return false;
+        }
+    }
+
 
 }
